@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaintenanceScheduler_v2.Screens.GarageScreen"
+             Title="Garage Screen">
+    
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <Label Text="Your Garage" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+
+        <Button Text="Add Vehicle" Clicked="AddVehicle_Clicked" />
+
+        <!-- TODO: change visable state of this label depending on the existance of a garage -->
+        <Label x:Name="NoGarage" IsVisible="True" FontSize="15" Padding="30">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Your garage is empty. Click " />
+                    <Span Text="Add Vehicle " FontAttributes="Italic" />
+                    <Span Text="to add a new vehicle to your garage." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <!-- Contents of the garage is displayed from file into the text of this label -->
+        <!-- TODO: display garage in a tile format which is easier to read and manipulate for user -->
+        <Label x:Name="TestLabel" Text="No Garage!" TextColor="Black" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"/>
+
+        <Button Text="Back" Clicked="Previous_Screen_Clicked"/>
+        <Button Text="Delete File" Clicked="Delete_Clicked"/>
+    </StackLayout>
+</ContentPage>

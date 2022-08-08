@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MaintenanceScheduler_v2.Screens"
+             x:DataType="local:AddVehicle_Screen"
+             x:Class="MaintenanceScheduler_v2.Screens.AddVehicle_Screen"
+             Title="Add Vehicle">
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <Label Text="Add New Vehicle" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+
+        <!-- {Binding ...} binds the content of the 'Entry' box to the variable 'VehicleType' -->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Vehicle Type:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding VehicleType}" Placeholder="eg. Car, Bike, Other" />
+        </StackLayout>
+        <Label Text="" HorizontalOptions="Center" TextColor="Red" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Registration:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding Registration}" Placeholder="Vehicle Registration" MaxLength="8"/>
+        </StackLayout>
+        <Label Text="" HorizontalOptions="Center" TextColor="Red" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Make:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding Make}" Placeholder="eg. Ford, Honda, Suzuki" />
+        </StackLayout>
+        <Label Text="" HorizontalOptions="Center" TextColor="Red" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Model:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding Model}" Placeholder="eg. Fiesta, Accord, Swift" />
+        </StackLayout>
+        <Label Text="" HorizontalOptions="Center" TextColor="Red" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Year of Manufacture:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding Year}" Placeholder="eg. 2014" MaxLength="4" Keyboard="Numeric" />
+        </StackLayout>
+        <Label Text="" HorizontalOptions="Center" TextColor="Red" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Milage:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Text="{Binding Milage}" Placeholder="default is 0" MaxLength="6" Keyboard="Numeric" />
+        </StackLayout>
+
+        <Label></Label>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="100">
+            <Button Text="Cancel" Clicked="Cancel_AddVehicle" />
+            <Button Text="Save" Clicked="Save_Vehicle" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

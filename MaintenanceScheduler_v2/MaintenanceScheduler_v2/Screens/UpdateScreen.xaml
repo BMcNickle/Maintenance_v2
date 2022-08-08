@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaintenanceScheduler_v2.Screens.UpdateScreen"
+             Title="Update Milage">
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <Label Text="Update Milage" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" />
+        </Frame>
+
+        <Label></Label>
+
+        <Label Text="GRZ 2217" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" FontSize="25" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Suzuki" />
+            <Label Text="DL650" />
+            <Label Text="2014" />
+        </StackLayout>
+
+        <Label Text="Motorbike" HorizontalTextAlignment="Center" />
+
+        <Label></Label>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Milage:" FontAttributes="Bold" Padding="10" FontSize="18"/>
+            <Entry Placeholder="default is 0" MaxLength="6" />
+        </StackLayout>
+
+        <Label></Label>
+
+        <!-- Buttons held in their own StackLayout to allow me to put them side-by-side -->
+        <!-- Properties set in a parent tag will apply to the children tags unless changed.  Normally used for text -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="100">
+            <Button Text="Cancel" Clicked="Cancel_Clicked" />
+            <Button Text="Save" Clicked="Update_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

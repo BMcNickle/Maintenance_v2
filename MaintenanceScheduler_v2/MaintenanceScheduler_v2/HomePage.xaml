@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaintenanceScheduler_v2.HomePage"
+             Title="Home Page">
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Label Text="Welcome to" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+                <Label Text="The Maintenance Scheduler 1000!" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Keep track of the regular maintenance requirements of your vehicles." FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="You will be notified of any maintenance jobs that are upcoming soon here.  Update the milage of your vehicle when you arrive home.  Update the app when you perform a maintenance job and the rest is done for you!" FontSize="16" Padding="30,0,30,0"/>
+
+        <Label></Label>
+
+        <!-- 'Clicked' property of a button calls the method of the same name held in the code-behind -->
+        <Button Text="Update Milage" Clicked="Update_Clicked"/>
+        <Button Text="Perform Maintenance" Clicked="Perform_Clicked"/>
+        <Button Text="Garage" Clicked="Garage_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
